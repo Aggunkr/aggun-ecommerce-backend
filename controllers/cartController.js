@@ -13,10 +13,7 @@ const addToCart = async (req, res) => {
       cart = new Cart({ user: userId, items: [] });
     }
 
-    const index = cart.items.findIndex(
-      item => item.product.toString() === productId
-    );
-
+    const index = cart.items.findIndex(item => item.product.toString() === productId);
     if (index !== -1) {
       cart.items[index].quantity += quantity || 1;
     } else {
