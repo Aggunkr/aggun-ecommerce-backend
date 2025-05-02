@@ -49,3 +49,8 @@ exports.removeFromCart = async (req, res) => {
     res.status(500).json({ msg: "Sunucu hatası" });
   }
 };
+module.exports = {
+  addToCart,
+  getCart,
+  removeFromCart
+};
